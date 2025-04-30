@@ -9,216 +9,299 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
-        <style>
-            :root {
-                --primary-color: #003366;
-                --accent-color: #337ab7;
-                --bg-light: #ffffff;
-                --bg-dark: #1e1e1e;
-                --text-light: #111;
-                --text-dark: #eee;
-                --highlight: #f0f0f0;
-            }
-    
+    <style>
+        :root {
+            --primary-color: #003366;
+            --accent-color: #337ab7;
+            --bg-light: #ffffff;
+            --bg-dark: #1e1e1e;
+            --text-light: #111;
+            --text-dark: #eee;
+            --highlight: #f0f0f0;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+            margin: 0;
+            background: var(--bg-light);
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            letter-spacing: 0.01em;
+            font-size: 15px;
+            /* updated */
+        }
+
+        .resume {
+            display: flex;
+            max-width: 1000px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: auto;
+            font-size: 15px;
+            /* updated */
+        }
+
+        aside {
+            background: #f5f5f5;
+            color: #111;
+            width: 32%;
+            padding: 16px;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 15px;
+            /* updated */
+        }
+
+        main {
+            width: 68%;
+            padding: 16px;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 15px;
+            /* updated */
+        }
+
+        .profile-photo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 26px;
+            /* keep as is for heading */
+            margin: 0;
+            color: var(--primary-color);
+            letter-spacing: 0.03em;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 16px;
+            /* keep as is for heading */
+            color: var(--accent-color);
+            margin-top: 3px;
+            font-weight: 400;
+        }
+
+        .contact,
+        .section {
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 15px;
+            /* updated */
+            font-weight: bold;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.02em;
+        }
+
+        .section-title::before {
+            content: '★';
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
+
+        .section p,
+        .skills span {
+            margin: 3px 0;
+            font-size: 15px;
+            /* updated */
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .skills span {
+            background: #ddd;
+            padding: 3px 7px;
+            border-radius: 10px;
+            font-size: 15px;
+            /* updated */
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+
+        .experience-item {
+            margin-bottom: 12px;
+        }
+
+        .experience-item h3 {
+            margin: 0;
+            font-size: 15px;
+            /* updated */
+            color: var(--primary-color);
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+        }
+
+        .experience-item .company {
+            font-size: 15px;
+            /* updated */
+            color: var(--accent-color);
+            margin-bottom: 2px;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        .experience-item .duration {
+            font-size: 15px;
+            /* updated */
+            color: rgb(52, 45, 45);
+            margin-bottom: 3px;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        .experience-item ul {
+            padding-left: 16px;
+            margin: 0;
+        }
+
+        .experience-item ul li {
+            font-size: 15px;
+            /* updated */
+            margin-bottom: 2px;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        @media print {
             body {
-                font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
-                margin: 0;
-                background: var(--bg-light);
-                color: var(--text-light);
-                display: flex;
-                justify-content: center;
-                padding: 10px;
-                letter-spacing: 0.01em;
-                font-size: 15px; /* updated */
-            }
-    
-            .resume {
-                display: flex;
-                max-width: 1000px;
-                width: 100%;
                 background: white;
-                box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                overflow: hidden;
-                margin: auto;
-                font-size: 15px; /* updated */
+                padding: 0;
+                font-size: 15px;
+                /* updated */
             }
-    
-            aside {
-                background: #f5f5f5;
-                color: #111;
-                width: 32%;
-                padding: 16px;
-                font-family: 'Roboto', Arial, sans-serif;
-                font-size: 15px; /* updated */
+
+            .resume {
+                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
+                width: 100%;
+                font-size: 15px;
+                /* updated */
+                padding-top: 0 !important;
             }
-    
+
+            header {
+                padding: 16px 30px 12px 30px !important;
+                /* reduce top/bottom padding */
+                border-bottom: 1px solid #ddd !important;
+            }
+
+            .resume {
+                padding-top: 10px !important;
+                /* reduce space between header and body */
+                padding-bottom: 0 !important;
+            }
+
+            aside,
             main {
-                width: 68%;
-                padding: 16px;
-                font-family: 'Roboto', Arial, sans-serif;
-                font-size: 15px; /* updated */
+                font-size: 15px !important;
+                /* updated */
             }
-    
-            .profile-photo {
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
-                object-fit: cover;
-                margin-bottom: 10px;
-            }
-    
-            h1 {
-                font-family: 'Montserrat', Arial, sans-serif;
-                font-size: 26px; /* keep as is for heading */
-                margin: 0;
-                color: var(--primary-color);
-                letter-spacing: 0.03em;
-                font-weight: 700;
-            }
-    
-            h2 {
-                font-family: 'Montserrat', Arial, sans-serif;
-                font-size: 16px; /* keep as is for heading */
-                color: var(--accent-color);
-                margin-top: 3px;
-                font-weight: 400;
-            }
-    
-            .contact,
-            .section {
-                margin-bottom: 14px;
-            }
-    
-            .section-title {
-                font-family: 'Montserrat', Arial, sans-serif;
-                font-size: 15px; /* updated */
-                font-weight: bold;
-                margin-bottom: 6px;
-                display: flex;
-                align-items: center;
-                letter-spacing: 0.02em;
-            }
-    
-            .section-title::before {
-                content: '★';
-                margin-right: 5px;
-                color: var(--accent-color);
-            }
-    
-            .section p,
-            .skills span {
-                margin: 3px 0;
-                font-size: 15px; /* updated */
-                font-family: 'Roboto', Arial, sans-serif;
-            }
-    
+
             .skills {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 4px;
+                gap: 1px !important;
+                margin-bottom: 2px !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
             }
-    
+
             .skills span {
-                background: #ddd;
-                padding: 3px 7px;
-                border-radius: 10px;
-                font-size: 15px; /* updated */
-                font-family: 'Roboto', Arial, sans-serif;
-                font-weight: 500;
-                letter-spacing: 0.01em;
+                font-size: 13px !important;
+                /* updated for print */
+                padding: 2px 5px !important;
+                margin-bottom: 1px !important;
+                min-width: 60px !important;
             }
-    
-            .experience-item {
-                margin-bottom: 12px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                font-size: 15px;
+                /* updated */
             }
-    
-            .experience-item h3 {
+
+            .resume {
+                box-shadow: none;
                 margin: 0;
-                font-size: 15px; /* updated */
-                color: var(--primary-color);
-                font-family: 'Montserrat', Arial, sans-serif;
-                font-weight: 700;
+                max-width: 100%;
+                width: 100%;
+                font-size: 15px;
+                /* updated */
+                padding-top: 0 !important;
             }
-    
-            .experience-item .company {
-                font-size: 15px; /* updated */
-                color: var(--accent-color);
-                margin-bottom: 2px;
-                font-family: 'Roboto', Arial, sans-serif;
+
+            header {
+                padding: 16px 30px 12px 30px !important;
+                /* reduce top/bottom padding */
+                border-bottom: 1px solid #ddd !important;
             }
-    
-            .experience-item .duration {
-                font-size: 15px; /* updated */
-                color: rgb(52, 45, 45);
-                margin-bottom: 3px;
-                font-family: 'Roboto', Arial, sans-serif;
+
+            .resume {
+                padding-top: 10px !important;
+                /* reduce space between header and body */
+                padding-bottom: 0 !important;
             }
-    
-            .experience-item ul {
-                padding-left: 16px;
-                margin: 0;
+
+            aside,
+            main {
+                font-size: 15px !important;
+                /* updated */
             }
-    
-            .experience-item ul li {
-                font-size: 15px; /* updated */
-                margin-bottom: 2px;
-                font-family: 'Roboto', Arial, sans-serif;
+
+            .skills {
+                gap: 1px !important;
+                margin-bottom: 2px !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
             }
-    
-            @media print {
-                body {
-                    background: white;
-                    padding: 0;
-                    font-size: 15px; /* updated */
-                }
-    
-                .resume {
-                    box-shadow: none;
-                    margin: 0;
-                    max-width: 100%;
-                    width: 100%;
-                    font-size: 15px; /* updated */
-                }
-    
-                aside, main {
-                    font-size: 15px !important; /* updated */
-                }
-    
-                .skills {
-                    gap: 1px !important;
-                    margin-bottom: 2px !important;
-                    page-break-inside: avoid !important;
-                    break-inside: avoid !important;
-                }
-    
-                .skills span {
-                    font-size: 13px !important; /* updated for print */
-                    padding: 2px 5px !important;
-                    margin-bottom: 1px !important;
-                    min-width: 60px !important;
-                }
+
+            .skills span {
+                font-size: 13px !important;
+                /* updated for print */
+                padding: 2px 5px !important;
+                margin-bottom: 1px !important;
+                min-width: 60px !important;
             }
-        </style>
+        }
+    </style>
 </head>
 
 <body>
     <div style="max-width: 1000px; margin: auto; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
         <!-- HEADER -->
         <header
-       < style="display: flex; align-items: center; gap: 20px; padding: 30px; flex-wrap: wrap; border-bottom: 1px solid #ddd;">
-        <img src="image.jpg" class="profile-photo" alt="Profile photo" />
-        <div style="flex: 1;">
-            <h1 style="margin: 0; font-size: 26px;">JYOTI KUMAR PODDAR</h1>
-            <h2 style="margin: 5px 0; font-size: 16px; color: #666;">Sr Software Engineer</h2>
-            <div style="font-size: 13px; display: flex; flex-wrap: wrap; gap: 15px; color: #333;">
-                <span>✉️ jyotipoddarsjce@gmail.com</span>
-                <span>📞 +358 40 85 89 960</span>
-                <span>🌐 <a href="https://www.linkedin.com/in/jyoti-kumar-poddar-362a285b/" target="_blank"
-                        style="color: #337ab7;">LinkedIn</a></span>
-                <span>📍 Vantaa, Finland</span>
+            style="display: flex; align-items: center; gap: 20px; padding: 30px; flex-wrap: wrap; border-bottom: 1px solid #ddd;">
+            <img src="image.jpg" class="profile-photo" alt="Profile photo" />
+            <div style="flex: 1;">
+                <h1 style="margin: 0; font-size: 26px;">JYOTI KUMAR PODDAR</h1>
+                <h2 style="margin: 5px 0; font-size: 16px; color: #666;">Sr Software Engineer</h2>
+                <div style="font-size: 13px; display: flex; flex-wrap: wrap; gap: 15px; color: #333;">
+                    <span>✉️ jyotipoddarsjce@gmail.com</span>
+                    <span>📞 +358 40 85 89 960</span>
+                    <span>🌐 <a href="https://www.linkedin.com/in/jyoti-kumar-poddar-362a285b/" target="_blank"
+                            style="color: #337ab7;">LinkedIn</a></span>
+                    <span>📍 Vantaa, Finland</span>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
         <!-- MAIN BODY: 2 COLUMNS -->
         <div class="resume" style="display: flex; padding: 30px;">
