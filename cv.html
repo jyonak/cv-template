@@ -34,7 +34,7 @@
 
         .resume {
             display: flex;
-            max-width: 800px;
+            max-width: 750px;
             width: 100%;
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -46,21 +46,21 @@
         aside {
             color: #111;
             width: 32%;
-            padding: 12px;
+            padding: 10px;
             font-family: 'Roboto', Arial, sans-serif;
             font-size: 13px;
         }
 
         main {
             width: 68%;
-            padding: 12px;
+            padding: 10px;
             font-family: 'Roboto', Arial, sans-serif;
             font-size: 13px;
         }
 
         .profile-photo {
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 8px;
@@ -68,7 +68,7 @@
 
         h1 {
             font-family: 'Montserrat', Arial, sans-serif;
-            font-size: 18px;
+            font-size: 17px;
             margin: 0;
             color: var(--primary-color);
             letter-spacing: 0.03em;
@@ -77,72 +77,25 @@
 
         h2 {
             font-family: 'Montserrat', Arial, sans-serif;
-            font-size: 13px;
+            font-size: 14px;
             color: var(--accent-color);
             margin-top: 3px;
             font-weight: 400;
-        }
-
-        .contact,
-        .section {
-            margin-bottom: 10px;
         }
 
         .section-title {
             font-family: 'Montserrat', Arial, sans-serif;
             font-size: 13px;
             font-weight: bold;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
             letter-spacing: 0.02em;
         }
 
-        .section-title::before {
-            content: '★';
-            margin-right: 5px;
-            color: var(--accent-color);
-        }
-
-        .section-title.strengths::before {
-            content: '💪';
-            margin-right: 5px;
-            color: var(--accent-color);
-        }
-
-        .section-title.skills::before {
-            content: '🛠️';
-            margin-right: 5px;
-            color: var(--accent-color);
-        }
-
-        .section-title.technical::before {
-            content: '💻';
-            margin-right: 5px;
-            color: var(--accent-color);
-        }
-
-        .section-title.summary::before {
-            content: '📝';
-            margin-right: 5px;
-            color: var(--accent-color);
-        }
-
-        .section-title.experience::before {
-            content: '🏢';
-            margin-right: 5px;
-            color: var(--accent-color);
-        }
-
-        .section-title.education::before {
-            content: '🎓';
-            margin-right: 5px;
-            color: var(--accent-color);
-        }
-
         .section p,
         .skills span {
-            margin: 2px 0;
+            margin: 3px 0;
             font-size: 13px;
             font-family: 'Roboto', Arial, sans-serif;
         }
@@ -159,7 +112,7 @@
             display: inline-block;
             color: #23408e;
             font-family: 'Montserrat', Arial, sans-serif;
-            font-size: 15px;
+            font-size: 13px;
             font-weight: 400;
             border-bottom: 1px solid #bfc4cc;
             padding-bottom: 2px;
@@ -176,7 +129,7 @@
         }
 
         .experience-item {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             page-break-inside: avoid;
         }
 
@@ -189,14 +142,14 @@
         }
 
         .experience-item .company {
-            font-size: 12px;
+            font-size: 13px;
             color: var(--accent-color);
             margin-bottom: 2px;
             font-family: 'Roboto', Arial, sans-serif;
         }
 
         .experience-item .duration {
-            font-size: 12px;
+            font-size: 13px;
             color: rgb(52, 45, 45);
             margin-bottom: 2px;
             font-family: 'Roboto', Arial, sans-serif;
@@ -208,167 +161,51 @@
         }
 
         .experience-item ul li {
-            font-size: 12px;
-            margin-bottom: 1px;
+            font-size: 13px;
+            margin-bottom: 2px;
             font-family: 'Roboto', Arial, sans-serif;
         }
 
-        .strengths-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
         .strengths-list li {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 18px;
-            background: none;
-            font-family: 'Montserrat', Arial, sans-serif;
-        }
-
-        .strengths-icon {
-            flex-shrink: 0;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: #f3f6fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            font-size: 18px;
-            color: #337ab7;
-            margin-top: 2px;
-        }
-
-        .strengths-content {
-            display: flex;
-            flex-direction: column;
+            font-size: 13px;
         }
 
         .strengths-title {
-            font-weight: 700;
-            color: #222;
-            font-size: 14px;
-            margin-bottom: 2px;
+            font-size: 13px;
         }
 
         .strengths-desc {
-            color: #444;
             font-size: 13px;
-            line-height: 1.4;
-        }
-
-        .section-title.skills {
-            color: #888;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            margin-bottom: 2px;
-            border-bottom: 2px solid #bfc4cc;
-            padding-bottom: 2px;
-            background: none;
-        }
-
-        @page {
-            size: A4;
-            margin: 18mm 12mm 18mm 12mm;
         }
 
         @media print {
 
-            html,
-            body {
-                background: white !important;
-                box-shadow: none !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                width: 100% !important;
+            html, body, .resume, aside, main {
                 font-size: 12px !important;
-            }
-
-            .resume {
-                box-shadow: none !important;
-                margin: 0 !important;
-                max-width: 100% !important;
-                width: 100% !important;
-                font-size: 12px !important;
+                max-width: 750px !important;
                 padding: 0 !important;
-                display: flex !important;
-            }
-
-            header {
-                padding: 10px 12px 8px 12px !important;
-                border-bottom: 1px solid #ddd !important;
-                page-break-inside: avoid !important;
-            }
-
-            .resume {
-                padding: 0 !important;
-            }
-
-            aside,
-            main {
-                font-size: 12px !important;
-                padding: 8px !important;
-            }
-
-            aside {
-                background: none !important;
-            }
-
-            .skills {
-                gap: 1px !important;
-                margin-bottom: 2px !important;
-                page-break-inside: avoid !important;
-                break-inside: avoid !important;
-            }
-
-            .skills span {
-                font-size: 10px !important;
-                padding: 1px 3px !important;
-                margin-bottom: 1px !important;
-                min-width: 40px !important;
-            }
-
-            .section,
-            .experience-item {
-                page-break-inside: avoid !important;
-                break-inside: avoid !important;
-            }
-
-            .profile-photo {
-                width: 40px !important;
-                height: 40px !important;
             }
 
             h1 {
                 font-size: 15px !important;
             }
 
-            h2,
-            .section-title {
-                font-size: 11px !important;
+            h2, .section-title {
+                font-size: 12px !important;
             }
 
-            .experience-item h3 {
-                font-size: 11px !important;
+            .skills span, .experience-item .company, .experience-item .duration, .experience-item ul li, .strengths-title, .strengths-desc {
+                font-size: 12px !important;
             }
 
-            .experience-item .company,
-            .experience-item .duration {
-                font-size: 10px !important;
+            .profile-photo {
+                width: 36px !important;
+                height: 36px !important;
             }
 
-            .experience-item ul li {
-                font-size: 10px !important;
-            }
-
-            a,
-            a:visited {
-                color: #003366 !important;
-                text-decoration: underline !important;
+            .resume {
+                box-shadow: none !important;
+                margin: 0 !important;
             }
         }
     </style>
