@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jyoti Kumar Poddar Resume</title>
+    <title>Jyoti Kumar Poddar</title>
     <!-- Add Google Fonts for a modern, impressive look -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
@@ -151,17 +151,29 @@
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 2px;
+            gap: 8px 18px;
+            margin-top: 8px;
+            margin-bottom: 8px;
         }
 
         .skills span {
-            background: #ddd;
-            padding: 1px 4px;
-            border-radius: 8px;
-            font-size: 12px;
-            font-family: 'Roboto', Arial, sans-serif;
-            font-weight: 500;
+            display: inline-block;
+            color: #23408e;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            border-bottom: 1px solid #bfc4cc;
+            padding-bottom: 2px;
+            margin-bottom: 2px;
+            min-width: 0;
+            background: none;
+            border-radius: 0;
             letter-spacing: 0.01em;
+            transition: color 0.2s;
+        }
+
+        .skills span:hover {
+            color: #003366;
         }
 
         .experience-item {
@@ -200,6 +212,64 @@
             font-size: 12px;
             margin-bottom: 1px;
             font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        .strengths-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .strengths-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 18px;
+            background: none;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+
+        .strengths-icon {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f3f6fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 18px;
+            color: #337ab7;
+            margin-top: 2px;
+        }
+
+        .strengths-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .strengths-title {
+            font-weight: 700;
+            color: #222;
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .strengths-desc {
+            color: #444;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .section-title.skills {
+            color: #888;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            margin-bottom: 2px;
+            border-bottom: 2px solid #bfc4cc;
+            padding-bottom: 2px;
+            background: none;
         }
 
         @page {
@@ -291,7 +361,7 @@
             <img src="image.jpg" class="profile-photo" alt="Profile photo" />
             <div style="flex: 1;">
                 <h1 style="margin: 0; font-size: 26px;">JYOTI KUMAR PODDAR</h1>
-                <h2 style="margin: 5px 0; font-size: 16px; color: #666;">Sr Software Engineer</h2>
+                <h2 style="margin: 5px 0; font-size: 16px; color: #666;">Expert IT Developer</h2>
                 <div style="font-size: 13px; display: flex; flex-wrap: wrap; gap: 15px; color: #333;">
                     <span>✉️ jyotipoddarsjce@gmail.com</span>
                     <span>📞 +358 40 85 89 960</span>
@@ -308,17 +378,46 @@
             <aside style="width: 35%; padding-right: 20px;">
                 <div class="section">
                     <div class="section-title strengths">Strengths</div>
-                    <p>Analytical and Problem-Solving Skills</p>
-                    <p>Teamwork and Collaboration</p>
-                    <p>Action Oriented</p>
-                    <p>Quick learner</p>
+                    <ul class="strengths-list">
+                        <li>
+                            <span class="strengths-icon">⭐</span>
+                            <span class="strengths-content">
+                                <span class="strengths-title">Analytical & Problem-Solving</span>
+                                <span class="strengths-desc">Able to break down complex problems and deliver effective solutions quickly.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="strengths-icon">👍</span>
+                            <span class="strengths-content">
+                                <span class="strengths-title">Teamwork & Collaboration</span>
+                                <span class="strengths-desc">Works well in diverse teams, fostering a positive and productive environment.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="strengths-icon">🚀</span>
+                            <span class="strengths-content">
+                                <span class="strengths-title">Action Oriented</span>
+                                <span class="strengths-desc">Takes initiative and drives projects forward to completion.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="strengths-icon">⚡</span>
+                            <span class="strengths-content">
+                                <span class="strengths-title">Quick Learner</span>
+                                <span class="strengths-desc">Adapts rapidly to new technologies and changing requirements.</span>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
                 <div class="section">
                     <div class="section-title skills">Skills</div>
                     <div class="skills">
-                        <span>Communication</span><span>Interpersonal Skills</span><span>Decision maker</span>
-                        <span>Collaboration</span><span>Leadership</span><span>Conceptual skills</span>
-                        <span>Agile</span><span>Scrum</span><span>Kanban</span>
+                        <span>Strategic Business Planning</span>
+                        <span>Financial Management</span>
+                        <span>Operations Optimisation</span>
+                        <span>Team Leadership &amp; Development</span>
+                        <span>Supply Chain Management</span>
+                        <span>Customer Service Excellence</span>
                     </div>
                 </div>
                 <div class="section">
