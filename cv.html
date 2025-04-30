@@ -29,15 +29,18 @@
                 justify-content: center;
                 padding: 10px;
                 letter-spacing: 0.01em;
+                font-size: 15px; /* updated */
             }
     
             .resume {
                 display: flex;
-                max-width: 900px;
+                max-width: 1000px;
                 width: 100%;
                 background: white;
-                box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
                 overflow: hidden;
+                margin: auto;
+                font-size: 15px; /* updated */
             }
     
             aside {
@@ -46,12 +49,14 @@
                 width: 32%;
                 padding: 16px;
                 font-family: 'Roboto', Arial, sans-serif;
+                font-size: 15px; /* updated */
             }
     
             main {
                 width: 68%;
                 padding: 16px;
                 font-family: 'Roboto', Arial, sans-serif;
+                font-size: 15px; /* updated */
             }
     
             .profile-photo {
@@ -64,7 +69,7 @@
     
             h1 {
                 font-family: 'Montserrat', Arial, sans-serif;
-                font-size: 22px;
+                font-size: 26px; /* keep as is for heading */
                 margin: 0;
                 color: var(--primary-color);
                 letter-spacing: 0.03em;
@@ -73,7 +78,7 @@
     
             h2 {
                 font-family: 'Montserrat', Arial, sans-serif;
-                font-size: 13px;
+                font-size: 16px; /* keep as is for heading */
                 color: var(--accent-color);
                 margin-top: 3px;
                 font-weight: 400;
@@ -86,7 +91,7 @@
     
             .section-title {
                 font-family: 'Montserrat', Arial, sans-serif;
-                font-size: 12px;
+                font-size: 15px; /* updated */
                 font-weight: bold;
                 margin-bottom: 6px;
                 display: flex;
@@ -103,7 +108,7 @@
             .section p,
             .skills span {
                 margin: 3px 0;
-                font-size: 12px;
+                font-size: 15px; /* updated */
                 font-family: 'Roboto', Arial, sans-serif;
             }
     
@@ -117,7 +122,7 @@
                 background: #ddd;
                 padding: 3px 7px;
                 border-radius: 10px;
-                font-size: 11px;
+                font-size: 15px; /* updated */
                 font-family: 'Roboto', Arial, sans-serif;
                 font-weight: 500;
                 letter-spacing: 0.01em;
@@ -129,21 +134,21 @@
     
             .experience-item h3 {
                 margin: 0;
-                font-size: 13px;
+                font-size: 15px; /* updated */
                 color: var(--primary-color);
                 font-family: 'Montserrat', Arial, sans-serif;
                 font-weight: 700;
             }
     
             .experience-item .company {
-                font-size: 11px;
+                font-size: 15px; /* updated */
                 color: var(--accent-color);
                 margin-bottom: 2px;
                 font-family: 'Roboto', Arial, sans-serif;
             }
     
             .experience-item .duration {
-                font-size: 10px;
+                font-size: 15px; /* updated */
                 color: rgb(52, 45, 45);
                 margin-bottom: 3px;
                 font-family: 'Roboto', Arial, sans-serif;
@@ -155,7 +160,7 @@
             }
     
             .experience-item ul li {
-                font-size: 11px;
+                font-size: 15px; /* updated */
                 margin-bottom: 2px;
                 font-family: 'Roboto', Arial, sans-serif;
             }
@@ -164,10 +169,19 @@
                 body {
                     background: white;
                     padding: 0;
+                    font-size: 15px; /* updated */
                 }
     
                 .resume {
                     box-shadow: none;
+                    margin: 0;
+                    max-width: 100%;
+                    width: 100%;
+                    font-size: 15px; /* updated */
+                }
+    
+                aside, main {
+                    font-size: 15px !important; /* updated */
                 }
     
                 .skills {
@@ -178,7 +192,7 @@
                 }
     
                 .skills span {
-                    font-size: 9px !important;
+                    font-size: 13px !important; /* updated for print */
                     padding: 2px 5px !important;
                     margin-bottom: 1px !important;
                     min-width: 60px !important;
@@ -191,20 +205,20 @@
     <div style="max-width: 1000px; margin: auto; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
         <!-- HEADER -->
         <header
-            style="display: flex; align-items: center; gap: 20px; padding: 30px; flex-wrap: wrap; border-bottom: 1px solid #ddd;">
-            <img src="image.jpg" class="profile-photo" alt="Profile photo" />
-            <div style="flex: 1;">
-                <h1 style="margin: 0; font-size: 26px;">JYOTI KUMAR PODDAR</h1>
-                <h2 style="margin: 5px 0; font-size: 16px; color: #666;">Sr Software Engineer</h2>
-                <div style="font-size: 13px; display: flex; flex-wrap: wrap; gap: 15px; color: #333;">
-                    <span>✉️ jyotipoddarsjce@gmail.com</span>
-                    <span>📞 +358 40 85 89 960</span>
-                    <span>🌐 <a href="https://www.linkedin.com/in/jyoti-kumar-poddar-362a285b/" target="_blank"
-                            style="color: #337ab7;">LinkedIn</a></span>
-                    <span>📍 Vantaa, Finland</span>
-                </div>
+       < style="display: flex; align-items: center; gap: 20px; padding: 30px; flex-wrap: wrap; border-bottom: 1px solid #ddd;">
+        <img src="image.jpg" class="profile-photo" alt="Profile photo" />
+        <div style="flex: 1;">
+            <h1 style="margin: 0; font-size: 26px;">JYOTI KUMAR PODDAR</h1>
+            <h2 style="margin: 5px 0; font-size: 16px; color: #666;">Sr Software Engineer</h2>
+            <div style="font-size: 13px; display: flex; flex-wrap: wrap; gap: 15px; color: #333;">
+                <span>✉️ jyotipoddarsjce@gmail.com</span>
+                <span>📞 +358 40 85 89 960</span>
+                <span>🌐 <a href="https://www.linkedin.com/in/jyoti-kumar-poddar-362a285b/" target="_blank"
+                        style="color: #337ab7;">LinkedIn</a></span>
+                <span>📍 Vantaa, Finland</span>
             </div>
-        </header>
+        </div>
+    </header>
 
         <!-- MAIN BODY: 2 COLUMNS -->
         <div class="resume" style="display: flex; padding: 30px;">
@@ -332,4 +346,5 @@
         </div>
     </div>
 </body>
+
 </html>
