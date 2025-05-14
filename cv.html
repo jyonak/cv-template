@@ -358,6 +358,36 @@
             background-color: #337ab7;
             margin-bottom: 10px;
         }
+        .education-item {
+            margin-bottom: 12px;
+            page-break-inside: avoid;
+        }
+        .degree {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--primary-color);
+            margin-bottom: 1px;
+        }
+        .edu-meta {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 12px;
+            color: #337ab7;
+            margin-bottom: 1px;
+        }
+        .edu-university {
+            font-weight: 500;
+        }
+        .edu-year {
+            margin-left: 8px;
+            color: #444;
+            font-weight: 400;
+        }
+        .edu-location {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 12px;
+            color: #555;
+        }
 
         .strengths-icon {
             flex-shrink: 0;
@@ -813,18 +843,24 @@
                 </div>
 
                 <div class="section">
-                    <div class="section-title education">Education</div>
+                    <div class="section-title education">EDUCATION</div>
                     <div class="education-content"></div>
-                    <p>
-                        <strong>Master in Computer Application</strong><br />
-                        Visvesvaraya Technological University — 2007<br />
-                        Mysore, India
-                    </p>
-                    <p>
-                        <strong>Bachelor's in Mathematics</strong><br />
-                        Vinoba Bhave University — 2003 - 2006<br />
-                        Hazaribagh, India
-                    </p>
+                    <div class="education-item">
+  <div class="degree">Master in Computer Application</div>
+  <div class="edu-meta">
+    <span class="edu-university">Visvesvaraya Technological University</span>
+    <span class="edu-year">— 2007</span>
+  </div>
+  <div class="edu-location">Mysore, India</div>
+</div>
+<div class="education-item">
+  <div class="degree">Bachelor's in Mathematics</div>
+  <div class="edu-meta">
+    <span class="edu-university">Vinoba Bhave University</span>
+    <span class="edu-year">— 2003 - 2006</span>
+  </div>
+  <div class="edu-location">Hazaribagh, India</div>
+</div>
                 </div>
             </main>
         </div>
