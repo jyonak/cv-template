@@ -10,390 +10,380 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <style>
-:root {
-    --primary-color: #2c3e50; /* Dark Blue/Grey */
-    --secondary-color: #3498db; /* Bright Blue */
-    --text-color: #34495e; /* Dark Grey */
-    --light-grey: #ecf0f1;
-    --very-light-grey: #f8f9f9;
-    --white: #ffffff;
-    --base-font-size: 10pt; /* Optimized for print */
-}
+        :root {
+            --primary-color: #003366;
+            --accent-color: #337ab7;
+            --bg-light: #ffffff;
+            --bg-dark: #1e1e1e;
+            --text-light: #111;
+            --text-dark: #eee;
+            --highlight: #f0f0f0;
+        }
 
-@page {
-    size: A4;
-    margin: 1.5cm; 
-}
+        body {
+            font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+            margin: 0;
+            background: var(--bg-light);
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            letter-spacing: 0.01em;
+            font-size: 13px;
+        }
 
-body {
-    font-family: 'Roboto', 'Arial', sans-serif;
-    line-height: 1.5;
-    color: var(--text-color);
-    background-color: var(--white);
-    margin: 0;
-    padding: 0;
-    font-size: var(--base-font-size); 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+        .resume {
+            display: flex;
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: auto;
+            font-size: 13px;
+        }
 
-.cv-container {
-    max-width: 210mm; 
-    margin: 0 auto; 
-    background: var(--white);
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* For screen view */
-    padding: 0 20px; /* Add some padding for screen view, print margins will override */
-}
+        aside {
+            color: #111;
+            width: 32%;
+            padding: 12px;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 13px;
+        }
 
-/* Header */
-.cv-header {
-    display: flex;
-    align-items: center;
-    padding: 15px 0; 
-    border-bottom: 2px solid var(--primary-color);
-    margin-bottom: 15px;
-}
+        main {
+            width: 68%;
+            padding: 12px;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 13px;
+        }
 
-.profile-photo {
-    width: 70px; 
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-    border: 2px solid var(--light-grey);
-}
+        .profile-photo {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 8px;
+        }
 
-.header-info {
-    flex: 1;
-}
+        h1 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 18px;
+            margin: 0;
+            color: var(--primary-color);
+            letter-spacing: 0.03em;
+            font-weight: 700;
+        }
 
-.header-info h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: calc(var(--base-font-size) * 2.2); 
-    color: var(--primary-color);
-    margin: 0 0 3px 0;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
+        h2 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 13px;
+            color: var(--accent-color);
+            margin-top: 3px;
+            font-weight: 400;
+        }
 
-.header-info h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: calc(var(--base-font-size) * 1.3); 
-    color: var(--secondary-color);
-    margin: 0 0 8px 0;
-    font-weight: 400;
-}
+        .contact,
+        .section {
+            margin-bottom: 10px;
+        }
 
-.contact-details {
-    font-size: calc(var(--base-font-size) * 0.9); 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px 15px; 
-    color: var(--text-color);
-}
+        .section-title {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.02em;
+        }
 
-.contact-details span, .contact-details a {
-    color: var(--text-color);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-.contact-details a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
-}
+        .section-title::before {
+            content: '★';
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
 
-/* Main Content: Two Columns */
-.cv-body {
-    display: flex;
-    flex-grow: 1; 
-}
+        .section-title.strengths::before {
+            content: '💪';
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
 
-.cv-aside { 
-    width: 33%; 
-    padding-right: 15px; 
-    border-right: 1px solid var(--light-grey);
-}
+        .section-title.skills::before {
+            content: '🛠️';
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
 
-.cv-main { 
-    width: 67%;
-    padding-left: 15px; 
-}
+        .section-title.technical::before {
+            content: '💻';
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
 
-/* Sections */
-.section {
-    margin-bottom: 12px; 
-    page-break-inside: avoid;
-}
+        .section-title.summary::before {
+            content: '📝';
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
 
-.section-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: calc(var(--base-font-size) * 1.25); 
-    color: var(--primary-color);
-    font-weight: 700;
-    margin-bottom: 6px;
-    padding-bottom: 3px;
-    border-bottom: 1px solid var(--secondary-color);
-    display: flex;
-    align-items: center;
-}
-.section-title.strengths::before,
-.section-title.skills::before,
-.section-title.technical::before,
-.section-title.summary::before,
-.section-title.experience::before,
-.section-title.education::before {
-    content: ''; 
-    margin-right: 0;
-}
+        .section-title.experience::before {
+            content: '🏢';
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
 
+        .section-title.education::before {
+            content: '🎓';
+            margin-right: 5px;
+            color: var(--accent-color);
+        }
 
-.section p, .section li {
-    font-size: var(--base-font-size);
-    margin-bottom: 4px;
-    line-height: 1.5;
-}
-.section ul {
-    list-style-position: outside;
-    padding-left: 18px; 
-    margin: 0;
-}
-.section > p { 
-    margin-top: 0;
-}
+        .section p,
+        .skills span {
+            margin: 2px 0;
+            font-size: 13px;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
 
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
 
-/* Strengths Section (Left Column) */
-.strengths-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.strengths-list li {
-    margin-bottom: 8px;
-    display: flex;
-    align-items: flex-start;
-    page-break-inside: avoid;
-}
-.strengths-icon { 
-    flex-shrink: 0;
-    width: auto; 
-    min-width: 18px;
-    margin-right: 7px;
-    font-size: calc(var(--base-font-size) * 1.1);
-    color: var(--secondary-color);
-    text-align: center;
-    line-height: 1.3; 
-    margin-top: 2px; 
-}
-.strengths-content .strengths-title {
-    font-weight: 700;
-    font-size: var(--base-font-size);
-    color: var(--text-color);
-    margin-bottom: 1px;
-}
-.strengths-content .strengths-desc {
-    font-size: calc(var(--base-font-size) * 0.9);
-    color: var(--text-color);
-    line-height: 1.3;
-}
+        .skills span {
+            display: inline-block;
+            color: #23408e;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            border-bottom: 1px solid #bfc4cc;
+            padding-bottom: 2px;
+            margin-bottom: 2px;
+            min-width: 0;
+            background: none;
+            border-radius: 0;
+            letter-spacing: 0.01em;
+            transition: color 0.2s;
+        }
 
-/* Skills Section (Left Column) */
-.skills-list { 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    padding: 0;
-    list-style: none; 
-    margin-top: 4px;
-}
-.skills-list li { 
-    background-color: var(--very-light-grey);
-    color: var(--primary-color);
-    padding: 3px 7px;
-    border-radius: 3px;
-    font-size: calc(var(--base-font-size) * 0.85);
-    font-weight: 500;
-    border: 1px solid var(--light-grey);
-    margin-bottom: 0; 
-    line-height: 1.3; 
-}
+        .skills span:hover {
+            color: #003366;
+        }
 
-/* Experience Section (Right Column) */
-.experience-item {
-    margin-bottom: 12px;
-    page-break-inside: avoid;
-}
-.experience-item h3 { 
-    font-family: 'Montserrat', sans-serif;
-    font-size: calc(var(--base-font-size) * 1.05);
-    color: var(--primary-color);
-    font-weight: 700;
-    margin: 0 0 1px 0;
-}
-.experience-item .company-duration { 
-    font-size: var(--base-font-size);
-    color: var(--secondary-color);
-    margin-bottom: 2px;
-    font-weight: 500;
-}
-.experience-item .location {
-    font-size: calc(var(--base-font-size) * 0.9);
-    color: var(--text-color);
-    font-style: italic;
-    margin-bottom: 3px;
-}
-.experience-item ul {
-    padding-left: 16px; 
-    margin-top: 3px;
-}
-.experience-item ul li {
-    font-size: calc(var(--base-font-size) * 0.95);
-    margin-bottom: 2px;
-    line-height: 1.4;
-}
+        .experience-item {
+            margin-bottom: 8px;
+            page-break-inside: avoid;
+        }
 
-/* Education Section (Right Column, if present) */
-.education-item { 
-    margin-bottom: 12px;
-    page-break-inside: avoid;
-}
-.education-item h3 { 
-    font-family: 'Montserrat', sans-serif;
-    font-size: calc(var(--base-font-size) * 1.05);
-    color: var(--primary-color);
-    font-weight: 700;
-    margin: 0 0 1px 0;
-}
-.education-item .institution-date { 
-    font-size: var(--base-font-size);
-    color: var(--secondary-color);
-    margin-bottom: 2px;
-    font-weight: 500;
-}
-.education-item p { 
-    font-size: calc(var(--base-font-size) * 0.95);
-    margin-bottom: 2px;
-}
+        .experience-item h3 {
+            margin: 0;
+            font-size: 13px;
+            color: var(--primary-color);
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+        }
 
-@media print {
-    body {
-        font-size: 9.5pt !important; 
-        background-color: var(--white) !important; 
-        color: #000000 !important; 
-        -webkit-print-color-adjust: exact !important; 
-        print-color-adjust: exact !important;
-    }
+        .experience-item .company {
+            font-size: 12px;
+            color: var(--accent-color);
+            margin-bottom: 2px;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
 
-    .cv-container {
-        box-shadow: none !important;
-        margin: 0 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        min-height: 0; 
-        border: none !important; 
-        padding: 0 !important; 
-    }
-    
-    .cv-header {
-        padding: 10px 0 !important;
-        margin-bottom: 10px !important;
-        border-bottom: 1.5px solid #333 !important;
-    }
-    .profile-photo {
-        width: 60px !important;
-        height: 60px !important;
-        margin-right: 15px !important;
-        border: 1px solid #ccc !important;
-    }
+        .experience-item .duration {
+            font-size: 12px;
+            color: rgb(52, 45, 45);
+            margin-bottom: 2px;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
 
-    .header-info h1 { font-size: 16pt !important; margin-bottom: 2px !important; }
-    .header-info h2 { font-size: 11pt !important; margin-bottom: 5px !important; }
-    .contact-details { font-size: 8pt !important; gap: 3px 10px !important;}
-    .contact-details span, .contact-details a { color: #000 !important; }
+        .experience-item ul {
+            padding-left: 16px;
+            margin: 0;
+        }
 
+        .experience-item ul li {
+            font-size: 12px;
+            margin-bottom: 1px;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
 
-    .cv-body { padding: 0 !important; }
-    .cv-aside {
-        width: 33% !important; 
-        padding-right: 10px !important; 
-        border-right: 1px solid #ccc !important;
-    }
-    .cv-main {
-        width: calc(67% - 11px) !important; 
-        padding-left: 10px !important; 
-    }
-    
-    .section { margin-bottom: 8px !important; }
-    .section-title {
-        font-size: 10.5pt !important;
-        margin-bottom: 4px !important;
-        padding-bottom: 2px !important;
-        border-bottom: 1px solid #666 !important;
-    }
+        .strengths-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-    .section p, .section li,
-    .strengths-content .strengths-title,
-    .experience-item h3,
-    .experience-item .company-duration,
-    .education-item h3,
-    .education-item .institution-date {
-        font-size: 9pt !important; 
-    }
-    .section ul { padding-left: 15px !important; }
+        .strengths-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 18px;
+            background: none;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
 
-    .strengths-icon { font-size: 10pt !important; margin-right: 5px !important; }
-    .strengths-content .strengths-desc,
-    .experience-item .location {
-        font-size: 8pt !important;
-    }
-    
-    .skills-list { gap: 4px !important; }
-    .skills-list li {
-        font-size: 7.5pt !important;
-        padding: 2px 5px !important;
-    }
+        .strengths-icon {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f3f6fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 18px;
+            color: #337ab7;
+            margin-top: 2px;
+        }
 
-    .experience-item ul li {
-        font-size: 8.5pt !important; 
-        line-height: 1.35 !important;
-        margin-bottom: 1px !important;
-    }
-    .experience-item { margin-bottom: 8px !important; }
+        .strengths-content {
+            display: flex;
+            flex-direction: column;
+        }
 
+        .strengths-title {
+            font-weight: 700;
+            color: #222;
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
 
-    a, a:visited {
-        color: #0000EE !important; 
-        text-decoration: none !important; 
-    }
-    
-    * { 
-      color: #000 !important;
-      background-color: transparent !important;
-      box-shadow: none !important;
-      text-shadow: none !important;
-    }
-    .header-info h1 { color: #000 !important; } 
-    .header-info h2 { color: #333 !important; } 
-    .experience-item .company-duration, .education-item .institution-date { color: #222 !important; }
-    .strengths-icon { color: #333 !important; }
-    .skills-list li { background-color: #eaeaea !important; border: 1px solid #d0d0d0 !important; color: #000 !important;}
+        .strengths-desc {
+            color: #444;
+            font-size: 13px;
+            line-height: 1.4;
+        }
 
-}
-</style>
+        .section-title.skills {
+            color: #888;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            margin-bottom: 2px;
+            border-bottom: 2px solid #bfc4cc;
+            padding-bottom: 2px;
+            background: none;
+        }
+
+        @page {
+            size: A4;
+            margin: 18mm 12mm 18mm 12mm;
+        }
+
+        @media print {
+
+            html,
+            body {
+                background: white !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+                font-size: 12px !important;
+            }
+
+            .resume {
+                box-shadow: none !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                font-size: 12px !important;
+                padding: 0 !important;
+                display: flex !important;
+            }
+
+            header {
+                padding: 10px 12px 8px 12px !important;
+                border-bottom: 1px solid #ddd !important;
+                page-break-inside: avoid !important;
+            }
+
+            .resume {
+                padding: 0 !important;
+            }
+
+            aside,
+            main {
+                font-size: 12px !important;
+                padding: 8px !important;
+            }
+
+            aside {
+                background: none !important;
+            }
+
+            .skills {
+                gap: 1px !important;
+                margin-bottom: 2px !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            .skills span {
+                font-size: 10px !important;
+                padding: 1px 3px !important;
+                margin-bottom: 1px !important;
+                min-width: 40px !important;
+            }
+
+            .section,
+            .experience-item {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            .profile-photo {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            h1 {
+                font-size: 15px !important;
+            }
+
+            h2,
+            .section-title {
+                font-size: 11px !important;
+            }
+
+            .experience-item h3 {
+                font-size: 11px !important;
+            }
+
+            .experience-item .company,
+            .experience-item .duration {
+                font-size: 10px !important;
+            }
+
+            .experience-item ul li {
+                font-size: 10px !important;
+            }
+
+            a,
+            a:visited {
+                color: #003366 !important;
+                text-decoration: underline !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="cv-container">
+    <div style="max-width: 1000px; margin: auto; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
         <!-- HEADER -->
-        <header class="cv-header">
+        <header
+            style="display: flex; align-items: center; gap: 20px; padding: 30px; flex-wrap: wrap; border-bottom: 1px solid #ddd;">
             <img src="image.jpg" class="profile-photo" alt="Profile photo" />
             <div style="flex: 1;">
-                <h1>JYOTI KUMAR PODDAR</h1>
-                <h2>Expert IT Developer</h2>
-                <div class="contact-details">
+                <h1 style="margin: 0; font-size: 26px;">JYOTI KUMAR PODDAR</h1>
+                <h2 style="margin: 5px 0; font-size: 16px; color: #666;">Expert IT Developer</h2>
+                <div style="font-size: 13px; display: flex; flex-wrap: wrap; gap: 15px; color: #333;">
                     <span>✉️ jyotipoddarsjce@gmail.com</span>
                     <span>📞 +358 40 85 89 960</span>
                     <span>🌐 <a href="https://www.linkedin.com/in/jyoti-kumar-poddar-362a285b/" target="_blank"
@@ -404,11 +394,11 @@ body {
         </header>
 
         <!-- MAIN BODY: 2 COLUMNS -->
-        <div class="cv-body">
+        <div class="resume" style="display: flex; padding: 30px;">
             <!-- LEFT COLUMN -->
-            <aside class="cv-aside">
+            <aside style="width: 35%; padding-right: 20px;">
                 <div class="section">
-                    <div class="section-title">Strengths</div>
+                    <div class="section-title strengths">Strengths</div>
                     <ul class="strengths-list">
                         <li>
                             <span class="strengths-icon">⭐</span>
@@ -445,31 +435,50 @@ body {
                     </ul>
                 </div>
                 <div class="section">
-                    <div class="section-title">Skills</div>
-                    <ul class="skills-list"><li>Strategic Business Planning</li><li>Financial Management</li><li>Operations Optimisation</li><li>Team Leadership &amp; Development</li><li>Supply Chain Management</li><li>Customer Service Excellence</li></ul>
+                    <div class="section-title skills">Skills</div>
+                    <div class="skills">
+                        <span>Communication &amp; Interpersonal Skills</span>
+                        <span>Collaboration &amp; Decision maker</span>
+                        <span>Operations Optimisation</span>
+                        <span>Aglie &amp; Scrum/Kanban</span>
+                    </div>
                 </div>
                 <div class="section">
-                    <div class="section-title">Technical</div>
-                    <ul class="skills-list"><li>System design and Architecture</li><li>Microservices API development</li><li>Design principles</li><li>AWS/Google cloud</li><li>DevOps</li><li>Release process</li><li>Spring Framework</li><li>Java</li><li>Async programming</li><li>JavaScript/Typescript</li><li>Angular/React</li><li>Python</li><li>Docker</li></ul>
+                    <div class="section-title technical">Technical</div>
+                    <div class="skills">
+                        <span>System design and Architecture</span>
+                        <span>Microservices API development</span>
+                        <span>Design principles</span>
+                        <span>AWS/Google cloud</span>
+                        <span>DevOps</span>
+                        <span>Release process</span>
+                        <span>Spring boot modules</span>
+                        <span>Java</span>
+                        <span>Async programming</span>
+                        <span>JavaScript/Typescript</span>
+                        <span>Angular/React</span>
+                        <span>Python</span>
+                        <span>Docker</span>
+                    </div>
                 </div>
             </aside>
 
             <!-- RIGHT COLUMN -->
-            <main class="cv-main">
+            <main style="width: 65%;">
                 <div class="section">
-                    <div class="section-title">Summary</div>
+                    <div class="section-title summary">Summary</div>
                     <p>
                         An analytical thinker who works collaboratively to get the job done. Committed to creating an
                         environment within the team to achieve customer satisfaction and company goals.
                     </p>
                 </div>
                 <div class="section">
-                    <div class="section-title">Experience</div>
+                    <div class="section-title experience">Experience</div>
 
                     <div class="experience-item">
                         <h3>Senior IT Developer</h3>
-                        <div class="company-duration">Nordea | 06/2021 - Ongoing</div>
-                        <div class="location">Helsinki, Finland</div>
+                        <div class="company">Nordea | 06/2021 - Ongoing</div>
+                        <div class="duration">Helsinki, Finland</div>
                         <ul>
                             <li>Collaborate with a global team to develop and manage new features for Netbank clients.
                             </li>
@@ -479,8 +488,8 @@ body {
 
                     <div class="experience-item">
                         <h3>Senior Software Developer</h3>
-                        <div class="company-duration">SkenarioLabs Oy | 02/2019 - 06/2021</div>
-                        <div class="location">Espoo, Finland</div>
+                        <div class="company">SkenarioLabs Oy | 02/2019 - 06/2021</div>
+                        <div class="duration">Espoo, Finland</div>
                         <ul>
                             <li>Switched from monolithic to modular applications.</li>
                             <li>Created UI using React Js and Chart Js for visualizing components.</li>
@@ -490,7 +499,7 @@ body {
                     <div class="experience-item">
                         <h3>Associate Lead Technology</h3>
                         <div class="company">Nagarro Oy | 06/2014 - 10/2018</div>
-                        <div class="location">Åland, Finland</div>
+                        <div class="duration">Åland, Finland</div>
                         <ul>
                             <li>Migrated old net bank to new netbank.</li>
                             <li>Converted monolithic application into smaller modules, reducing significant time in
@@ -503,7 +512,7 @@ body {
                     <div class="experience-item">
                         <h3>Associate Technology L2</h3>
                         <div class="company">Publicis Sapient | 10/2012 - 05/2014</div>
-                        <div class="location">Gurgaon, India</div>
+                        <div class="duration">Gurgaon, India</div>
                         <ul>
                             <li>Worked on Integration platform using Red Hat Fuse ESB and Apache Camel.</li>
                             <li>Oracle ATG: Creating repository templates, implementation, JUnit, BCC customization,
@@ -514,7 +523,7 @@ body {
                     <div class="experience-item">
                         <h3>Software Engineer</h3>
                         <div class="company">One Communications Ltd. | 06/2011 - 09/2012</div>
-                        <div class="location">Noida, India</div>
+                        <div class="duration">Noida, India</div>
                         <ul>
                             <li>Subscription Manager for internal product at One97 Communication, integrating VAS life
                                 cycle requirements of all operators under one product.</li>
@@ -524,7 +533,7 @@ body {
                 </div>
 
                 <div class="section">
-                    <div class="section-title">Education</div>
+                    <div class="section-title education">Education</div>
                     <p>
                         <strong>Master in Computer Application</strong><br />
                         Visvesvaraya Technological University — 2007<br />
@@ -533,7 +542,7 @@ body {
                     <p>
                         <strong>Bachelor's in Mathematics</strong><br />
                         Vinoba Bhave University — 2003 - 2006<br />
-                        Hazaribag, India
+                        Hazaribagh, India
                     </p>
                 </div>
             </main>
