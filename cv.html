@@ -118,15 +118,31 @@
         }
 
         .section-title.skills::before {
-            content: '🛠️';
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
             margin-right: 5px;
-            color: var(--accent-color);
+        }
+        .section-title.skills svg {
+            width: 18px;
+            height: 18px;
+            stroke: #337ab7;
+            margin-right: 5px;
+            vertical-align: middle;
         }
 
         .section-title.technical::before {
-            content: '💻';
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
             margin-right: 5px;
-            color: var(--accent-color);
+        }
+        .section-title.technical svg {
+            width: 18px;
+            height: 18px;
+            stroke: #337ab7;
+            margin-right: 5px;
+            vertical-align: middle;
         }
         
         .section-title.technical {
@@ -154,15 +170,31 @@
         }
 
         .section-title.experience::before {
-            content: '🏢';
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
             margin-right: 5px;
-            color: var(--accent-color);
+        }
+        .section-title.experience svg {
+            width: 18px;
+            height: 18px;
+            stroke: #337ab7;
+            margin-right: 5px;
+            vertical-align: middle;
         }
 
         .section-title.education::before {
-            content: '🎓';
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
             margin-right: 5px;
-            color: var(--accent-color);
+        }
+        .section-title.education svg {
+            width: 18px;
+            height: 18px;
+            stroke: #337ab7;
+            margin-right: 5px;
+            vertical-align: middle;
         }
 
         .section p,
@@ -604,7 +636,9 @@
                     <div class="section-title strengths">STRENGTHS</div>
                     <ul class="strengths-list">
                         <li>
-                            <span class="strengths-icon">⭐</span>
+                            <span class="strengths-icon">  <!-- Flag SVG -->
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V2h14l-1.5 4L18 10H6"/></svg>
+</span>
                             <span class="strengths-content">
                                 <span class="strengths-title">Analytical & Problem-Solving</span>
                                 <span class="strengths-desc">Able to break down complex problems and deliver effective
@@ -612,7 +646,9 @@
                             </span>
                         </li>
                         <li>
-                            <span class="strengths-icon">👍</span>
+                            <span class="strengths-icon">  <!-- Diamond SVG -->
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 21 2 9 6 3"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="2" y1="9" x2="22" y2="9"/></svg>
+</span>
                             <span class="strengths-content">
                                 <span class="strengths-title">Teamwork & Collaboration</span>
                                 <span class="strengths-desc">Works well in diverse teams, fostering a positive and
@@ -620,7 +656,9 @@
                             </span>
                         </li>
                         <li>
-                            <span class="strengths-icon">🚀</span>
+                            <span class="strengths-icon">  <!-- Target SVG -->
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+</span>
                             <span class="strengths-content">
                                 <span class="strengths-title">Action Oriented</span>
                                 <span class="strengths-desc">Takes initiative and drives projects forward to
@@ -628,7 +666,9 @@
                             </span>
                         </li>
                         <li>
-                            <span class="strengths-icon">⚡</span>
+                            <span class="strengths-icon">  <!-- Lightning SVG -->
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+</span>
                             <span class="strengths-content">
                                 <span class="strengths-title">Quick Learner</span>
                                 <span class="strengths-desc">Adapts rapidly to new technologies and changing
@@ -684,8 +724,12 @@
                         <h3>Expert IT Developer</h3>
                         <div class="experience-meta">
                             <span class="company"><strong><span style="color:#337ab7;">Nordea</span></strong></span>
-                            <span class="meta-detail"><span class="meta-icon">&#128197;</span> 06/2021 - Ongoing</span>
-                            <span class="meta-detail"><span class="meta-icon">&#128205;</span> Helsinki, Finland</span>
+                            <span class="meta-detail"><span class="meta-icon">  <!-- Calendar SVG -->
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+</span> 06/2021 - Ongoing</span>
+                            <span class="meta-detail"><span class="meta-icon">  <!-- Location SVG -->
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+</span> Helsinki, Finland</span>
                         </div>
                         <ul>
                             <li>Collaborate with a global team to develop and manage new features for Netbank clients.
@@ -698,8 +742,12 @@
                         <h3>Senior Software Developer</h3>
                         <div class="experience-meta">
                             <span class="company"><strong><span style="color:#337ab7;">SkenarioLabs Oy</span></strong></span>
-                            <span class="meta-detail"><span class="meta-icon">&#128197;</span> 02/2019 - 06/2021</span>
-                            <span class="meta-detail"><span class="meta-icon">&#128205;</span> Espoo, Finland</span>
+                            <span class="meta-detail"><span class="meta-icon">  <!-- Calendar SVG -->
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+</span> 02/2019 - 06/2021</span>
+                            <span class="meta-detail"><span class="meta-icon">  <!-- Location SVG -->
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+</span> Espoo, Finland</span>
                         </div>
                         <ul>
                             <li>Switched from monolithic to modular applications.</li>
@@ -711,8 +759,12 @@
                         <h3>Associate Lead Technology</h3>
                         <div class="experience-meta">
                             <span class="company"><strong><span style="color:#337ab7;">Nagarro Oy</span></strong></span>
-                            <span class="meta-detail"><span class="meta-icon">&#128197;</span> 06/2014 - 10/2018</span>
-                            <span class="meta-detail"><span class="meta-icon">&#128205;</span> Åland, Finland</span>
+                            <span class="meta-detail"><span class="meta-icon">  <!-- Calendar SVG -->
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+</span> 06/2014 - 10/2018</span>
+                            <span class="meta-detail"><span class="meta-icon">  <!-- Location SVG -->
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+</span> Åland, Finland</span>
                         </div>
                         <ul>
                             <li>Migrated old net bank to new netbank.</li>
@@ -727,8 +779,12 @@
                         <h3>Associate Technology L2</h3>
                         <div class="experience-meta">
                             <span class="company"><strong><span style="color:#337ab7;">Publicis Sapient</span></strong></span>
-                            <span class="meta-detail"><span class="meta-icon">&#128197;</span> 10/2012 - 05/2014</span>
-                            <span class="meta-detail"><span class="meta-icon">&#128205;</span> Gurgaon, India</span>
+                            <span class="meta-detail"><span class="meta-icon">  <!-- Calendar SVG -->
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+</span> 10/2012 - 05/2014</span>
+                            <span class="meta-detail"><span class="meta-icon">  <!-- Location SVG -->
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+</span> Gurgaon, India</span>
                         </div>
                         <ul>
                             <li>Worked on Integration platform using Red Hat Fuse ESB and Apache Camel.</li>
@@ -741,8 +797,12 @@
                         <h3>Software Engineer</h3>
                         <div class="experience-meta">
                             <span class="company"><strong><span style="color:#337ab7;">One Communications Ltd.</span></strong></span>
-                            <span class="meta-detail"><span class="meta-icon">&#128197;</span> 06/2011 - 09/2012</span>
-                            <span class="meta-detail"><span class="meta-icon">&#128205;</span> Noida, India</span>
+                            <span class="meta-detail"><span class="meta-icon">  <!-- Calendar SVG -->
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+</span> 06/2011 - 09/2012</span>
+                            <span class="meta-detail"><span class="meta-icon">  <!-- Location SVG -->
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#337ab7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+</span> Noida, India</span>
                         </div>
                         <ul>
                             <li>Subscription Manager for internal product at One97 Communication, integrating VAS life
